@@ -101,3 +101,9 @@
 (global-set-key (kbd "C-x t") 'phpunit-current-test)    ; phpunit
 (global-set-key (kbd "C-x c") 'phpunit-current-class)   ; phpunit
 (global-set-key (kbd "C-x p") 'phpunit-current-project) ; phpunit
+
+
+(require 'flymake-phpcs)
+(add-hook 'php-mode-hook 'flymake-phpcs-load)
+(custom-set-variables
+ '(flymake-phpcs-standard "~/git/backend/php-common/netatmo_ruleset.xml"))
