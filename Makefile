@@ -6,6 +6,14 @@ all: build-ssh build-git build-bash build-emacs
 clean: clean-ssh clean-git clean-bash clean-emacs
 	-rm .*~
 
+install-dependencies:
+	apt-add-repository -y ppa:adrozdoff/emacs
+	add-apt-repository ppa:git-core/ppa
+	apt-get update
+	apt-get install emacs25 git terminator autoconf texlive-full mercurial
+
+
+
 build-emacs:
 	-ln -s $(current_dir)/emacs ~/.emacs
 	mkdir ~/.emacs.d/
@@ -14,6 +22,7 @@ build-emacs:
 clean-emacs:
 	-rm ~/.emacs
 	-rm -r ~/.emacs.d
+
 
 
 build-ssh:
@@ -29,7 +38,6 @@ build-git:
 
 clean-git:
 	-rm ~/.gitconfig
-
 
 
 
