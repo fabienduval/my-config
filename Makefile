@@ -10,7 +10,8 @@ install-dependencies:
 	apt-add-repository -y ppa:adrozdoff/emacs
 	add-apt-repository ppa:git-core/ppa
 	apt-get update
-	apt-get install emacs25 git terminator autoconf texlive-full mercurial
+	apt-get install emacs25 git terminator autoconf texlive-full mercurial php php-pear
+	pear install --alldeps PHP_CodeSniffer
 
 
 
