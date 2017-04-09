@@ -13,7 +13,7 @@
     (eval-print-last-sexp)))
 
 ; packages to install
-(setq 
+(setq
  my-packages '(auctex
                auto-complete
                color-theme-solarized
@@ -26,12 +26,13 @@
                popup
                jedi
                nyan-mode
+               php-mode
                helm
                helm-descbinds
                js2-mode
                yasnippet
                yaml-mode
-               ))   
+               ))
 
 ; first enable shallow clone, so we don't need to clone the entire
 ; history of every project
@@ -41,4 +42,3 @@
 (el-get 'sync my-packages)
 
 (provide 'el-get-settings)
-
