@@ -5,3 +5,10 @@
 [user]
 	email = fabien@duval.bzh
 	name = Fabien DUVAL
+[core]
+    editor = emacs
+[color]
+    status = auto
+    branch = auto
+    diff = auto
+    interactive = auto

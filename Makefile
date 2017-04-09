@@ -1,3 +1,4 @@
+
 current_dir = $(shell pwd)
 
 all: build-ssh build-git build-bash build-emacs
@@ -11,7 +12,7 @@ build-emacs:
 
 clean-emacs:
 	-rm ~/.emacs
-	-rm -rf ~/.emacs.d
+	-rm -r ~/.emacs.d
 
 
 build-ssh:
