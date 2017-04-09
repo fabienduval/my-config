@@ -2,3 +2,6 @@
 	default = simple
 [pull]
 	rebase = true
+[user]
+	email = fabien@duval.bzh
+	name = Fabien DUVAL
