@@ -8,7 +8,8 @@ clean: clean-ssh clean-git clean-bash clean-emacs
 
 build-emacs:
 	-ln -s $(current_dir)/emacs ~/.emacs
-	cp -r $(current_dir)/emacs.d ~/.emacs.d
+	mkdir ~/.emacs.d/
+	-ln -s $(current_dir)/emacs.d/settings ~/.emacs.d/settings
 
 clean-emacs:
 	-rm ~/.emacs
