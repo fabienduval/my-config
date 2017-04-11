@@ -3,7 +3,7 @@
 [pull]
 	rebase = true
 [user]
-	email = fabien@duval.bzh
+	email = fabien.duval@netatmo.com
 	name = Fabien DUVAL
 [core]
     editor = emacs
