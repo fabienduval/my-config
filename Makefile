@@ -1,7 +1,7 @@
 
 current_dir = $(shell pwd)
 
-all: build-ssh build-git build-bash build-emacs
+all: build-ssh build-git build-bash build-emacs build-autostart
 
 clean: clean-ssh clean-git clean-bash clean-emacs
 	-rm .*~
@@ -14,6 +14,11 @@ install-dependencies:
 	pear install --alldeps PHP_CodeSniffer
 
 
+build-autostart:
+	-ln -s $(current_dir)/autostart/emacsserver ~/.config/autostart/emacsserver.desktop
+
+clean-autostart:
+	-rm ~/.config/autostart/emacsserver.desktop
 
 build-emacs:
 	-ln -s $(current_dir)/emacs ~/.emacs

@@ -66,3 +66,7 @@ git() {
         command git "$@"
     fi
 }
+
+export ALTERNATE_EDITOR=""
+export EDITOR="emacsclient.emacs25 -t"
+export VISUAL="emacsclient.emacs25 -c -a emacs" # $VISUAL opens in GUI with non-daemon as alternate
