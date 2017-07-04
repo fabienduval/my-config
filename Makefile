@@ -7,12 +7,11 @@ clean: clean-ssh clean-git clean-bash clean-emacs
 	-rm .*~
 
 install-dependencies:
-	apt-add-repository -y ppa:adrozdoff/emacs
-	add-apt-repository ppa:git-core/ppa
+	./add-ppa.sh kelleyk/emacs
+	./add-ppa.sh git-core/ppa
 	apt-get update
-	apt-get install emacs25 git terminator autoconf texlive-full mercurial php php-pear
-	pear install --alldeps PHP_CodeSniffer
-
+	apt-get install -y emacs25 git terminator autoconf texlive-full mercurial php php-pear
+	./install-phptools.sh
 
 build-autostart:
 	-ln -s $(current_dir)/autostart/emacsserver ~/.config/autostart/emacsserver.desktop
