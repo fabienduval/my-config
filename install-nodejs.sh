@@ -9,4 +9,6 @@ export NVM_DIR="$HOME/.nvm"
 nvm install node
 nvm install 6
 
-npm install -g eslint
+nvm install iojs
+
+npm install -g eslint babel-eslint eslint-plugin-react
