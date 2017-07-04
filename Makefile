@@ -6,12 +6,17 @@ all: build-ssh build-git build-bash build-emacs build-autostart
 clean: clean-ssh clean-git clean-bash clean-emacs
 	-rm .*~
 
+
+
 install-dependencies:
 	./add-ppa.sh kelleyk/emacs
 	./add-ppa.sh git-core/ppa
 	apt-get update
 	apt-get install -y emacs25 git terminator autoconf texlive-full mercurial php php-pear
 	./install-phptools.sh
+	./install-nodejs.sh
+
+
 
 build-autostart:
 	-ln -s $(current_dir)/autostart/emacsserver ~/.config/autostart/emacsserver.desktop
