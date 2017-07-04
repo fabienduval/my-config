@@ -1,9 +1,9 @@
 
 current_dir = $(shell pwd)
 
-all: build-ssh build-git build-bash build-emacs build-autostart
+all: build-ssh build-git build-bash build-emacs build-terminator build-autostart
 
-clean: clean-ssh clean-git clean-bash clean-emacs
+clean: clean-ssh clean-git clean-bash clean-emacs clean-terminator
 	-rm .*~
 
 
@@ -11,6 +11,7 @@ clean: clean-ssh clean-git clean-bash clean-emacs
 install-dependencies:
 	./add-ppa.sh kelleyk/emacs
 	./add-ppa.sh git-core/ppa
+	./add-ppa.sh gnome-terminator
 	apt-get update
 	apt-get install -y emacs25 git terminator autoconf texlive-full mercurial php php-pear
 	./install-phptools.sh
@@ -32,6 +33,14 @@ build-emacs:
 clean-emacs:
 	-rm ~/.emacs
 	-rm -r ~/.emacs.d
+
+
+
+build-terminator:
+	-ln -s $(current_dir)/terminator ~/.config/terminator
+
+clean-terminator:
+	-rm -rf ~/.config/terminator
 
 
 
