@@ -27,6 +27,9 @@
 (include-plugin "magit")
 (require 'magit)
 
+(setq auto-mode-alist (delete '("git-rebase-todo" . rebase-mode)
+                              auto-mode-alist))
+
 ;; Popup
 (include-elget-plugin "popup")
 (require 'popup)

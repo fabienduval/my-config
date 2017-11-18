@@ -35,6 +35,9 @@ clean-emacs:
 	-rm -r ~/.emacs.d
 
 
+build-shortcuts:
+	-ln -s $(current_dir)/shortcuts/postman.desktop ~/.local/share/applications/postman.desktop
+
 
 build-terminator:
 	-ln -s $(current_dir)/terminator ~/.config/terminator
