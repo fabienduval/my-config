@@ -30,6 +30,8 @@
 (setq auto-mode-alist (delete '("git-rebase-todo" . rebase-mode)
                               auto-mode-alist))
 
+(global-set-key (kbd "C-x g") 'magit-status)
+
 ;; Popup
 (include-elget-plugin "popup")
 (require 'popup)
