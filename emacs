@@ -120,3 +120,15 @@
  '(flymake-phpcs-standard "~/git/backend/php-common/netatmo_ruleset.xml"))
 (custom-set-variables
  '(flymake-phpcs-options "-n"))
+
+
+;--------------------------------------------------------------------
+
+(defun ssh (args)
+  "Connect to a remote host by SSH."
+  (interactive "sssh ")
+  (let ((switches (split-string-and-unquote args)))
+    (set-buffer (apply 'make-term "ssh" "ssh" nil switches))
+    (term-mode)
+    (term-char-mode)
+    (switch-to-buffer "*ssh*")))
