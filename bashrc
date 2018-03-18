@@ -73,6 +73,7 @@ export EDITOR="emacsclient.emacs25 -t"
 export VISUAL="emacsclient.emacs25 -c -a emacs" # $VISUAL opens in GUI with non-daemon as alternate
 
 export DOCKER_MOUNT_LOCAL=true
+export DOCKER_NETWORK=host
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
