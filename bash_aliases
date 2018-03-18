@@ -26,3 +26,7 @@ alias csshq="cssh \$(ls /home/fduval/git/infra/puppet/hiera_data/fqdn/ | sed 's/
 alias csshr="cssh \$(ls /home/fduval/git/infra/puppet/hiera_data/fqdn/ | sed 's/.yaml//g' | grep -E '^r[0-9]+')"
 alias csshp="cssh \$(ls /home/fduval/git/infra/puppet/hiera_data/fqdn/ | sed 's/.yaml//g' | grep -E '^p[0-9]+')"
 alias csshf="cssh \$(ls /home/fduval/git/infra/puppet/hiera_data/fqdn/ | sed 's/.yaml//g' | grep -E '^f[0-9]+')"
+
+if [ -f ~/.bash_aliases.override ]; then
+    . ~/.bash_aliases.override
+fi
