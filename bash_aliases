@@ -19,7 +19,7 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
-alias emacs='emacsclient.emacs25 -t'
+alias emacs='emacsclient.emacs25 -t --with-x-toolkit=lucid'
 
 alias csshb="cssh \$(ls /home/fduval/git/infra/puppet/hiera_data/fqdn/ | sed 's/.yaml//g' | grep -E '^b[0-9]+')"
 alias csshq="cssh \$(ls /home/fduval/git/infra/puppet/hiera_data/fqdn/ | sed 's/.yaml//g' | grep -E '^q[0-9]+')"

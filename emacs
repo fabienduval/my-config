@@ -19,6 +19,9 @@
 ;; install dependencies with el-get
 (require 'el-get-settings)
 
+(set-background-color "#000000")
+(add-to-list 'default-frame-alist '(background-color . "#000000"))
+
 ;---------------;
 ;;; Utilities ;;;
 ;---------------;
