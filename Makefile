@@ -9,11 +9,10 @@ clean: clean-ssh clean-git clean-bash clean-emacs clean-terminator
 
 
 install-dependencies:
-	./add-ppa.sh kelleyk/emacs
 	./add-ppa.sh git-core/ppa
 	./add-ppa.sh gnome-terminator
 	apt-get update
-	apt-get install -y emacs25 git terminator autoconf texlive-full mercurial php php-pear
+	apt-get install -y emacs git terminator autoconf texlive-full mercurial php php-pear
 	./install-phptools.sh
 	./install-nodejs.sh
 
@@ -27,8 +26,7 @@ clean-autostart:
 
 build-emacs:
 	-ln -s $(current_dir)/emacs ~/.emacs
-	mkdir ~/.emacs.d/
-	-ln -s $(current_dir)/emacs.d/settings ~/.emacs.d/settings
+	-ln -s $(current_dir)/emacs.d ~/.emacs.d
 
 clean-emacs:
 	-rm ~/.emacs

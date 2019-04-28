@@ -1,10 +1,7 @@
-alias emacs='emacs -nw'
 alias gti='git'
 
 alias gitr='git rebase -i master'
 alias gits='git status'
-alias gitc='git checkout'
-alias gitm='git checkout master'
 alias gitp='git pull'
 
 # enable color support of ls
@@ -19,13 +16,7 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
-alias emacs='emacsclient.emacs25 -t'
-
-alias csshb="cssh \$(ls /home/fduval/git/infra/puppet/hiera_data/fqdn/ | sed 's/.yaml//g' | grep -E '^b[0-9]+')"
-alias csshq="cssh \$(ls /home/fduval/git/infra/puppet/hiera_data/fqdn/ | sed 's/.yaml//g' | grep -E '^q[0-9]+')"
-alias csshr="cssh \$(ls /home/fduval/git/infra/puppet/hiera_data/fqdn/ | sed 's/.yaml//g' | grep -E '^r[0-9]+')"
-alias csshp="cssh \$(ls /home/fduval/git/infra/puppet/hiera_data/fqdn/ | sed 's/.yaml//g' | grep -E '^p[0-9]+')"
-alias csshf="cssh \$(ls /home/fduval/git/infra/puppet/hiera_data/fqdn/ | sed 's/.yaml//g' | grep -E '^f[0-9]+')"
+alias emacs='emacsclient.emacs25 -t -nw'
 
 if [ -f ~/.bash_aliases.override ]; then
     . ~/.bash_aliases.override
