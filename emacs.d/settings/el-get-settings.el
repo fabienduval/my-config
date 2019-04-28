@@ -20,15 +20,11 @@
                ein
                magit
                markdown-mode
-               matlab-mode
                pydoc-info
-               scss-mode
                popup
                jedi
                nyan-mode
                php-mode
-               helm
-               helm-descbinds
                js2-mode
                yasnippet
                yaml-mode
