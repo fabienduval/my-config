@@ -16,8 +16,7 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
-alias emacs='emacsclient.emacs25 -t -nw'
-
+alias emacs='emacsclient.emacs -t -nw'
 alias webdav='mount --target ~/davfs'
 
 if [ -f ~/.bash_aliases.override ]; then
