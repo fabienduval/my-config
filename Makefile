@@ -26,12 +26,9 @@ clean-autostart:
 
 build-emacs:
 	-ln -s $(current_dir)/emacs ~/.emacs
-	-ln -s $(current_dir)/emacs.d ~/.emacs.d
 
 clean-emacs:
 	-rm ~/.emacs
-	-rm -r ~/.emacs.d
-
 
 build-shortcuts:
 	-ln -s $(current_dir)/shortcuts/postman.desktop ~/.local/share/applications/postman.desktop
