@@ -1,7 +1,0 @@
-[Desktop Entry]
-Name=EmacsServer
-Comment=Starts emacs server
-Type=Application
-Terminal=false
-Exec=emacs25 --daemon
-StartupNotify=false

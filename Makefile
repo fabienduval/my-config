@@ -1,37 +1,18 @@
 
 current_dir = $(shell pwd)
 
-all: build-ssh build-git build-bash build-emacs build-terminator build-autostart
+all: build-ssh build-git build-bash build-terminator
 
-clean: clean-ssh clean-git clean-bash clean-emacs clean-terminator
+clean: clean-ssh clean-git clean-bash clean-terminator
 	-rm .*~
 
 
 
 install-dependencies:
 	./add-ppa.sh git-core/ppa
-	./add-ppa.sh gnome-terminator
 	apt-get update
-	apt-get install -y emacs git terminator autoconf texlive-full mercurial php php-pear
-	./install-phptools.sh
-	./install-nodejs.sh
+	apt-get install -y git terminator autoconf
 
-
-
-build-autostart:
-	-ln -s $(current_dir)/autostart/emacsserver ~/.config/autostart/emacsserver.desktop
-
-clean-autostart:
-	-rm ~/.config/autostart/emacsserver.desktop
-
-build-emacs:
-	-ln -s $(current_dir)/emacs ~/.emacs
-
-clean-emacs:
-	-rm ~/.emacs
-
-build-shortcuts:
-	-ln -s $(current_dir)/shortcuts/postman.desktop ~/.local/share/applications/postman.desktop
 
 
 build-terminator:

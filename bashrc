@@ -33,7 +33,6 @@ fi
 
 PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[01;31m\]$(__git_ps1)\[\033[00m\]$ '
 
-
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
@@ -50,8 +49,7 @@ if ! shopt -oq posix; then
 fi
 
 
-
-# make git submodules usable
+# make git submodules usable... auto pull them
 # This overwrites the 'git' command with modifications where necessary, and
 # calls the original otherwise
 git() {
@@ -69,8 +67,8 @@ git() {
 
 
 export ALTERNATE_EDITOR=""
-export EDITOR="emacsclient.emacs25 -t"
-export VISUAL="emacsclient.emacs25 -c -a emacs" # $VISUAL opens in GUI with non-daemon as alternate
+export EDITOR="emacs"
+export VISUAL="emacs" # $VISUAL opens in GUI with non-daemon as alternate
 
 export DOCKER_MOUNT_LOCAL=true
 export DOCKER_NETWORK=host
@@ -81,3 +79,9 @@ export NVM_DIR="$HOME/.nvm"
 
 export CURRENT_USER_ID=$(id -u):$(id -g)
 
+# add root to display to launch app in dockers
+xhost|grep root > /dev/null;
+if [ $? -ne 0 ];
+then
+    xhost +SI:localuser:root
+fi
