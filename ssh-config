@@ -1,8 +1,5 @@
 Host *.net
      User fduval
      Port 1021
-Host *.bzh
-     User fabien
-     Port 1021
 Host github.com
      Port 22

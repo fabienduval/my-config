@@ -1,26 +1,10 @@
 
 current_dir = $(shell pwd)
 
-all: build-ssh build-git build-bash build-terminator
+all: build-ssh build-git build-bash
 
-clean: clean-ssh clean-git clean-bash clean-terminator
+clean: clean-ssh clean-git clean-bash
 	-rm .*~
-
-
-
-install-dependencies:
-	./add-ppa.sh git-core/ppa
-	apt-get update
-	apt-get install -y git terminator autoconf
-
-
-
-build-terminator:
-	-ln -s $(current_dir)/terminator ~/.config/terminator
-
-clean-terminator:
-	-rm -rf ~/.config/terminator
-
 
 
 build-ssh:
@@ -30,13 +14,11 @@ clean-ssh:
 	-rm ~/.ssh/config
 
 
-
 build-git:
 	-ln -s $(current_dir)/gitconfig ~/.gitconfig
 
 clean-git:
 	-rm ~/.gitconfig
-
 
 
 build-bash:
