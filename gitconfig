@@ -3,10 +3,10 @@
 [pull]
 	rebase = true
 [user]
-	email = fabien.duval@netatmo.com
+	email = fabien.duval@legrand.com
 	name = Fabien DUVAL
 [core]
-    editor = emacs -nw
+    editor = ec
 [color]
     status = auto
     branch = auto

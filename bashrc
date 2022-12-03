@@ -66,9 +66,9 @@ git() {
 }
 
 
-export ALTERNATE_EDITOR=""
-export EDITOR="emacs"
-export VISUAL="emacs" # $VISUAL opens in GUI with non-daemon as alternate
+export ALTERNATE_EDITOR="emacs"
+export EDITOR="ec"
+export VISUAL="ec" # $VISUAL opens in GUI with non-daemon as alternate
 
 export DOCKER_MOUNT_LOCAL=true
 export DOCKER_NETWORK=host
